@@ -1,13 +1,13 @@
-let playerSelection = prompt("rock, paper or scissors?");
-computerSelection = getComputerChoice();
-
 function getComputerChoice(){
   let selection = ["rock", "paper", "scissors"];
   let computerSelection = selection[Math.floor(Math.random()*selection.length)];
   return computerSelection
 }
 
-function playRound (playerSelection, computerSelection) {
+function playRound () {
+
+  let playerSelection = prompt("rock, paper or scissors?");
+  computerSelection = getComputerChoice();
 
   if (computerSelection === playerSelection ){
     console.log("It's a tie.");
@@ -22,4 +22,12 @@ function playRound (playerSelection, computerSelection) {
   }
 }
 
-playRound(playerSelection, computerSelection);
+function Game() {
+  playRound();
+  playRound();
+  playRound();
+  playRound();
+  playRound();
+}
+
+Game();
